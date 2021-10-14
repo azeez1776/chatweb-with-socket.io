@@ -9,4 +9,7 @@ const displayMessage = (e) => {
 
 };
 
+const joinRoom = () => {
+    const room = document.querySelector('#room')
+}
 document.querySelector('#send-message').addEventListener('click', displayMessage);
