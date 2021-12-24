@@ -14,4 +14,7 @@ const displayMessage = (e) => {
 const joinRoom = () => {
     const room = document.querySelector('#room')
 }
+
+const socket = io('http://localhost:3000')
+
 document.querySelector('#send-message').addEventListener('click', displayMessage);
