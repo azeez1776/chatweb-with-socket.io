@@ -1,3 +1,5 @@
+import { io } from 'socket.io-client';
+
 const displayMessage = (e) => {
     e.preventDefault();
     let x = document.querySelector('#message');
