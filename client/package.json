@@ -4,7 +4,9 @@
   "description": "A client part of the chat server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "snowpack dev",
+    "build": "snowpack build"
   },
   "author": "azeez1776",
   "license": "ISC",
