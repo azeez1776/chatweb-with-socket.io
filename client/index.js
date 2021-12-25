@@ -20,6 +20,7 @@ form.addEventListener("submit", e => {
 
 joinRoom.addEventListener('click', () => {
     const room = roomInput.value;
+    socket.emit('join-room', room)
 
 })
 
@@ -42,4 +43,3 @@ socket.on('connect', () => {
     displayMessage(`You connected with id: ${socket.id}`)
 })
 socket.on('receive-message', message => displayMessage(message))
-socket.emit('join-room', room)
