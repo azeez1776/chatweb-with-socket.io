@@ -1,3 +1,4 @@
+const { intsrument } = require('@socket.io/admin-ui')
 const io = require('socket.io')(3000, {
     cors: {
         origin: ['http://localhost:8080']
