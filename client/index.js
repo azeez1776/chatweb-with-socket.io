@@ -1,5 +1,5 @@
 import { io } from 'socket.io-client';
-
+const socket = io('http://localhost:3000')
 const form = document.getElementById('form');
 const messageInput = document.getElementById('message');
 const roomInput = document.getElementById('room');
@@ -38,10 +38,9 @@ const displayMessage = (message) => {
 
 
 
-const socket = io('http://localhost:3000')
 socket.on('connect', () => {
     displayMessage(`You connected with id: ${socket.id}`)
-    socket.emit('recieve-message', displayMessage(message))
 })
+socket.on('receive-message', message => displayMessage(message))
 
 
