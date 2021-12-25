@@ -13,7 +13,7 @@ form.addEventListener("submit", e => {
 
     if (message === '') return
     displayMessage(message);
-    socket.emit('send-message', message);
+    socket.emit('send-message', message, room);
     messageInput.value = ''
 
 })
