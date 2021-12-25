@@ -1,5 +1,7 @@
 import { io } from 'socket.io-client';
 
+const form = document.getElementsByTagName('form');
+
 const displayMessage = (message) => {
 
     // let x = document.querySelector('#message');
