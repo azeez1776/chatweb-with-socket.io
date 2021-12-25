@@ -3,6 +3,7 @@ import { io } from 'socket.io-client';
 const form = document.getElementsByTagName('form');
 const messageInput = document.getElementById('message');
 const roomInput = document.getElementById('room');
+const joinRoom = document.getElementById('joinRoom');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -13,7 +14,11 @@ form.addEventListener('submit', e => {
     if (message === '') return
     displayMessage(message);
 
+    messageInput.value = ''
+
 })
+
+
 
 const displayMessage = (message) => {
 
@@ -26,9 +31,7 @@ const displayMessage = (message) => {
 
 };
 
-const joinRoom = () => {
-    const room = document.querySelector('#room')
-}
+
 
 const socket = io('http://localhost:3000')
 socket.on('connect', () => {
@@ -40,4 +43,3 @@ socket.on('recieve-message', message => {
     displayMessage(message)
 })
 
-document.querySelector('#send-message').addEventListener('click', displayMessage);
