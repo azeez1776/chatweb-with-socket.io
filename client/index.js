@@ -2,6 +2,10 @@ import { io } from 'socket.io-client';
 
 const form = document.getElementsByTagName('form');
 
+form.addEventListener('submit', () => {
+    const messageInput = document.getElementById('message');
+})
+
 const displayMessage = (message) => {
 
     // let x = document.querySelector('#message');
