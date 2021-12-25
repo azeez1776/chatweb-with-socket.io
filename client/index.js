@@ -1,11 +1,11 @@
 import { io } from 'socket.io-client';
 
-const form = document.getElementsByTagName('form');
+const form = document.getElementById('form');
 const messageInput = document.getElementById('message');
 const roomInput = document.getElementById('room');
-const joinRoom = document.getElementById('joinRoom');
+const joinRoom = document.getElementById('join-room');
 
-form.addEventListener('submit', e => {
+form.addEventListener("submit", e => {
     e.preventDefault();
     const message = messageInput.value;
     const room = roomInput.value;
@@ -41,7 +41,7 @@ const displayMessage = (message) => {
 const socket = io('http://localhost:3000')
 socket.on('connect', () => {
     displayMessage(`You connected with id: ${socket.id}`)
-    socket.emit('send-message', displayMessage())
+    socket.emit('recieve-message', displayMessage(message))
 })
 
 
