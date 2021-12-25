@@ -42,5 +42,4 @@ socket.on('connect', () => {
     displayMessage(`You connected with id: ${socket.id}`)
 })
 socket.on('receive-message', message => displayMessage(message))
-
-
+socket.emit('join-room', room)
