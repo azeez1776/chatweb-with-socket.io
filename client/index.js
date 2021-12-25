@@ -2,8 +2,14 @@ import { io } from 'socket.io-client';
 
 const form = document.getElementsByTagName('form');
 
-form.addEventListener('submit', () => {
+form.addEventListener('submit', e => {
+    e.preventDefault();
     const messageInput = document.getElementById('message');
+    const message = messageInput.value;
+
+    if (message === '') return
+    displayMessage(message);
+
 })
 
 const displayMessage = (message) => {
