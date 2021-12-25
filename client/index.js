@@ -18,6 +18,11 @@ form.addEventListener('submit', e => {
 
 })
 
+joinRoom.addEventListener('click', () => {
+    const room = roomInput.value;
+
+})
+
 
 
 const displayMessage = (message) => {
