@@ -1,11 +1,14 @@
 import { io } from 'socket.io-client';
 
 const form = document.getElementsByTagName('form');
+const messageInput = document.getElementById('message');
+const roomInput = document.getElementById('room');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-    const messageInput = document.getElementById('message');
     const message = messageInput.value;
+    const room = roomInput.value;
+
 
     if (message === '') return
     displayMessage(message);
